@@ -32,7 +32,7 @@ const target = [
 ];
 
 test("pads 'label' attr for all obj in array to equal length", () => {
-  expect(main(testArray)).toEqual(target);
+  expect(main(testArray, 'label')).toEqual(target);
 });
 
 // 1. Get values for all 'label' attributes in testArray
