@@ -16,7 +16,7 @@ const testArray = [
     label: "Kosrae" }
 ];
 
-const targetArray = [
+const target = [
   { imgId: "chuuk_FSM",
     label: "Chuuk   " },
   { imgId: "yap_FSM",
@@ -32,10 +32,12 @@ const targetArray = [
 ];
 
 test("pads 'label' attr for all obj in array to equal length", () => {
-  expect(main(testArray)).toEqual(targetArray);
+  expect(main(testArray)).toEqual(target);
 });
 
 // 1. Get values for all 'label' attributes in testArray
 // 2. Determine longest item in labels array
 // 3. Create array of all labels padded to equal longest length
 // 4. Rewrite 'label' attributes in testArray to padded version
+
+module.exports = testArray;
