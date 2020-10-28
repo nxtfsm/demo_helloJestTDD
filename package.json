@@ -2,9 +2,9 @@
   "name": "helloJestTDD_padArray",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest --coverage --passWithNoTests"
   },
   "keywords": [],
   "author": "",
