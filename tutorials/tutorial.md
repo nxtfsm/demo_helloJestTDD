@@ -46,14 +46,14 @@ expect( stepAdd(1, 2) ).toEqual(4)
 Still. This is counting on your fingers stuff, so why do the extra work? After all, good programmers are *supposed* to be lazy. But it's lazy on our terms, and since I'm itching to stick in another movie reference: "You keep using that word. I do not think it means what you think it means."
 
 
-Programmatically lazy looks something like this:
+Programatically lazy is working smarter not harder, doing a little bit of thinking-work to get out of doing the stuff that's just mind-numbing repetition.  Programmatically lazy looks something like this:
 
 ```
 expect( lookupCapitalCity('Micronesia') ).toBe('Palikir')
 ```
 
 
-...and then writing a function that describes the steps folks who don't know will take to know if that test is true or false:
+...and then writing a function that automates the steps folks who don't know will take to know if that test is true or false, so that the function will work no matter what country we throw at that:
 
 ```
     function lookupCapitalCity(someCountry) {
@@ -68,7 +68,7 @@ expect( lookupCapitalCity('Micronesia') ).toBe('Palikir')
 ```
 
 
-...but this would also pass the test:
+...and sure, figuring out a pattern and automating that does take some thought. But this would also pass the test:
 
 
 ```
@@ -103,6 +103,30 @@ function lookupCapitalCity(someCountry) {
 
   }
 ```
+...and maybe you could extend that by writing:
+```
+  function lookupCapitalCity(someCountry) {
+
+  if (someCountry === 'Micronesia') {
+
+    return 'Palikir'
+
+  }
+
+  if (someCountry === 'Philippines') {
+
+    return 'Manilla'
+
+  }
+
+  else {
+
+    return 'Where's that?'
+
+  }
+
+  }
+```
 
 ...but we'd look like we didn't know any better when these two tests return false:
 
@@ -113,9 +137,9 @@ expect( lookupCapitalCity('Marshall Islands') ).toBe('Majuro')
 ```
 expect( lookupCapitalCity('FSM') ).toBe('Palikir')
 ```
+...and we really wouldn't know any better if we wasted our time writing out 190+ 'if'/'else' handlers to cover each country in the world. To put it mildly, that would be... tedious.
 
-
-Really what we're looking for is something that can go through a whole list of countries, and the different ways they can be abbreviated, and match up the results of their capitals (and probably think our way around more than a few edge conditions of spelling and world politics). Really what we're doing is matching things up in a database and this example starts to get both pointlessly simple and relatively complicated. Besides, relatively speaking, national capitals don't change all that often and copying and pasting a complete list is easy enough (except when it isn't).
+Really what we're looking for is something that can go through a whole list of countries, and the different ways they can be abbreviated, and match up the results of their capitals (and probably think our way around more than a few edge conditions of spelling and world politics). In essence that's a database query and a different topic for another time, and following it too far here would make this example start to get both pointlessly simple and surprisingly complicated. Besides, relatively speaking, national capitals don't change all that often and if your App really depends on having access to that dataset, there are simpler ways to handle it than working out some kind of function to call wikipedia or google maps.
 
 
 But what about a function that also returns the current weather in the capital city?
