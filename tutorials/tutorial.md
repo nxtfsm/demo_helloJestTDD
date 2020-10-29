@@ -12,34 +12,37 @@ In a nutshell TDD is this: *first* you write code that checks if the code you're
 
 True or False...
 
-```javascript
-{
+```javascript{
 expect(1+2).toEqual(3)
 }
 ```
 
 No big deal, and to be fair, that's a calculation that mechanical computers were solving before the electric lightbulb was a thing. So even though you *could* write and test the following function:
 
-```
+```javascript{
 function add(a, b) { return a + b }
+}
 ```
 
-```
+```javascript{
 expect( add(1, 2) ).toEqual(3)
+}
 ```
 
 
 you could also write...
 
 
-```
+```javascript{
 function stepAdd(number, step) { return number + (number + step) }
+}
 ```
 
 and
 
-```
+```javascript{
 expect( stepAdd(1, 2) ).toEqual(4)
+}
 ```
 
 
@@ -48,15 +51,16 @@ Still. This is counting on your fingers stuff, so why do the extra work? After a
 
 Programatically lazy is working smarter not harder, doing a little bit of thinking-work to get out of doing the stuff that's just mind-numbing repetition.  Programmatically lazy looks something like this:
 
-```
+```javascript{
 expect( lookupCapitalCity('Micronesia') ).toBe('Palikir')
+}
 ```
 
 
 ...and then writing a function that automates the steps folks who don't know will take to know if that test is true or false, so that the function will work no matter what country we throw at it:
 
-```
-    function lookupCapitalCity(someCountry) {
+```javascript{
+function lookupCapitalCity(someCountry) {
 
     // look up someCountry on wikipedia or google maps or wherever
 
@@ -65,30 +69,33 @@ expect( lookupCapitalCity('Micronesia') ).toBe('Palikir')
     // send that answer back out to whoever called this function
 
   }
+}
 ```
 
 
 ...and sure, figuring out a pattern and automating that does take some thought. But this would also pass the test:
 
 
-```
+```javascript{
 function lookupCapitalCity(someCountry) {
 
     return 'Palikir'
 
   }
+}
 ```
 
 ...even if the test were:
 
-```
+```javascript{
     expect( lookupCapitalCity('Palau') ).toBe('Palikir')
+}
 ```
 
 
 ...you could rewrite the function to be:
 
-```
+```javascript{
     function lookupCapitalCity(someCountry) {
 
     if (someCountry === 'Micronesia') {
@@ -102,9 +109,10 @@ function lookupCapitalCity(someCountry) {
     }
 
   }
+}
 ```
 ...and maybe you could extend that by writing:
-```
+```javascript{
   function lookupCapitalCity(someCountry) {
 
     if (someCountry === 'Micronesia') {
@@ -126,16 +134,19 @@ function lookupCapitalCity(someCountry) {
     }
 
   }
+}
 ```
 
 ...but we'd look like we didn't know any better when these two tests return false:
 
-```
+```javascript{
 expect( lookupCapitalCity('Marshall Islands') ).toBe('Majuro')
+}
 ```
 
-```
+```javascript{
 expect( lookupCapitalCity('FSM') ).toBe('Palikir')
+}
 ```
 
 ...and as programmers, we really wouldn't know any better if we wasted our time googling and then writing out 190+ 'if'/'else' handlers to cover each country in the world. To put it nicely, that would be... tedious.
