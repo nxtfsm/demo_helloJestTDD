@@ -107,23 +107,23 @@ function lookupCapitalCity(someCountry) {
 ```
   function lookupCapitalCity(someCountry) {
 
-  if (someCountry === 'Micronesia') {
+    if (someCountry === 'Micronesia') {
 
-    return 'Palikir'
+      return 'Palikir'
 
-  }
+    }
 
-  if (someCountry === 'Philippines') {
+    if (someCountry === 'Philippines') {
 
-    return 'Manilla'
+      return 'Manilla'
 
-  }
+    }
 
-  else {
+    else {
 
-    return 'Where's that?'
+      return 'Where's that?'
 
-  }
+    }
 
   }
 ```
@@ -137,7 +137,8 @@ expect( lookupCapitalCity('Marshall Islands') ).toBe('Majuro')
 ```
 expect( lookupCapitalCity('FSM') ).toBe('Palikir')
 ```
-...and we really wouldn't know any better if we wasted our time writing out 190+ 'if'/'else' handlers to cover each country in the world. To put it mildly, that would be... tedious.
+
+...and as programmers, we really wouldn't know any better if we wasted our time googling and then writing out 190+ 'if'/'else' handlers to cover each country in the world. To put it nicely, that would be... tedious.
 
 Really what we're looking for is something that can go through a whole list of countries, and the different ways they can be abbreviated, and match up the results of their capitals (and probably think our way around more than a few edge conditions of spelling and world politics). In essence that's a database query and a different topic for another time, and following it too far here would make this example start to get both pointlessly simple and surprisingly complicated. Besides, relatively speaking, national capitals don't change all that often and if your App really depends on having access to that dataset, there are simpler ways to handle it than working out some kind of function to call wikipedia or google maps.
 
