@@ -12,8 +12,10 @@ In a nutshell TDD is this: *first* you write code that checks if the code you're
 
 True or False...
 
-```
+```javascript
+{
 expect(1+2).toEqual(3)
+}
 ```
 
 No big deal, and to be fair, that's a calculation that mechanical computers were solving before the electric lightbulb was a thing. So even though you *could* write and test the following function:
@@ -41,8 +43,6 @@ expect( stepAdd(1, 2) ).toEqual(4)
 ```
 
 
-
-
 Still. This is counting on your fingers stuff, so why do the extra work? After all, good programmers are *supposed* to be lazy. But it's lazy on our terms, and since I'm itching to stick in another movie reference: "You keep using that word. I do not think it means what you think it means."
 
 
@@ -53,7 +53,7 @@ expect( lookupCapitalCity('Micronesia') ).toBe('Palikir')
 ```
 
 
-...and then writing a function that automates the steps folks who don't know will take to know if that test is true or false, so that the function will work no matter what country we throw at that:
+...and then writing a function that automates the steps folks who don't know will take to know if that test is true or false, so that the function will work no matter what country we throw at it:
 
 ```
     function lookupCapitalCity(someCountry) {
