@@ -51,7 +51,7 @@ expect( lookupCapitalCity('Micronesia') ).toBe('Palikir')
 ```
 
 
-...and then writing a function that automates the steps folks who don't know will take to know if that test is true or false, so that the function will work no matter what country we throw at it:
+...and then writing a function that automates the steps folks who don't know will take to know if that test should return true or false, so that the function will work no matter what country we throw at it:
 
 ```javascript
 function lookupCapitalCity(someCountry) {
@@ -87,7 +87,7 @@ function lookupCapitalCity(someCountry) {
 ...you could rewrite the function to be:
 
 ```javascript
-    function lookupCapitalCity(someCountry) {
+function lookupCapitalCity(someCountry) {
 
     if (someCountry === 'Micronesia') {
 
@@ -95,15 +95,14 @@ function lookupCapitalCity(someCountry) {
 
     } else {
 
-      return 'Where's that?'
+      return "Where's that?"
 
     }
-
   }
 ```
 ...and maybe you could extend that by writing:
 ```javascript
-  function lookupCapitalCity(someCountry) {
+function lookupCapitalCity(someCountry) {
 
     if (someCountry === 'Micronesia') {
 
@@ -119,7 +118,7 @@ function lookupCapitalCity(someCountry) {
 
     else {
 
-      return 'Where's that?'
+      return "Where's that?"
 
     }
 
