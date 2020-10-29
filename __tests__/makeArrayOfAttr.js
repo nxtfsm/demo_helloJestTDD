@@ -19,12 +19,20 @@ const fallbackArray = [
 ];
 
 test("creates array from 'label' attributes in 'location' array", () => {
-  const result = makeArrayOfAttr(testArray, testKey);
+  //expect(makeArrayOfAttr(testArray, testKey)).toEqual(target);//<--simplest
+  try {
+    const resultToTest = makeArrayOfAttr(testArray, testKey);
+    runTests(resultToTest);
+  } catch {
+    const resultToTest = makeArrayOfAttr(fallbackArray, testKey);
+    runTests(resultToTest);
+  }
 
-  expect(result).toEqual(target);
-  expect(result).not.toBe(target);
-  expect(result[0]).toEqual(target[0]);
+  function runTests(result) {
+    expect(result).toEqual(target);
+    expect(result).not.toBe(target);
+    expect(result[0]).toEqual(target[0]);
+    expect(result[0]).toBe(target[0]);
+  };
 
-  //try { expect(makeArrayOfAttr(testArray, testKey)).toEqual(target); }
-  //catch { expect(makeArrayOfAttr(fallbackArray, testKey)).toEqual(target); }
 });
