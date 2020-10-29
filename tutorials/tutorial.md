@@ -12,28 +12,48 @@ In a nutshell TDD is this: *first* you write code that checks if the code you're
 
 True or False...
 
-{ expect(1+2).toEqual(3) }
+{
+
+  expect(1+2).toEqual(3)
+
+}
 
 
 No big deal, and to be fair, that's a calculation that mechanical computers were solving before the electric lightbulb was a thing. So even though you *could* write and test the following function:
 
 
-{ function add(a, b) { return a + b } }
+{
+
+  function add(a, b) { return a + b }
+
+}
 
 
-{ expect( add(1, 2) ).toEqual(3) }
+{
+
+  expect( add(1, 2) ).toEqual(3)
+
+}
 
 
 you could also write...
 
 
-{ function stepAdd(number, step) { return number + (number + step) } }
+{
+
+  function stepAdd(number, step) { return number + (number + step) }
+
+}
 
 
 and
 
 
-{ expect( stepAdd(1, 2) ).toEqual(4) }
+{
+
+  expect( stepAdd(1, 2) ).toEqual(4)
+
+}
 
 
 Still. This is counting on your fingers stuff, so why do the extra work? After all, good programmers are *supposed* to be lazy. But it's lazy on our terms, and since I'm itching to stick in another movie reference: "You keep using that word. I do not think it means what you think it means."
@@ -42,13 +62,19 @@ Still. This is counting on your fingers stuff, so why do the extra work? After a
 Programmatically lazy looks something like this:
 
 
-{ expect( lookupCapitalCity('Micronesia') ).toBe('Palikir') }
+{
+
+  expect( lookupCapitalCity('Micronesia') ).toBe('Palikir')
+
+}
 
 
 ...and then writing a function that describes the steps folks who don't know will take to know if that test is true or false:
 
 
-{ function lookupCapitalCity(someCountry) {
+{
+
+  function lookupCapitalCity(someCountry) {
 
   // look up someCountry on wikipedia or google maps or wherever
 
@@ -56,26 +82,38 @@ Programmatically lazy looks something like this:
 
   // send that answer back out to whoever called this function
 
-} }
+}
+
+}
 
 
 ...but this would also pass the test:
 
-{ function lookupCapitalCity(someCountry) {
+{
+
+  function lookupCapitalCity(someCountry) {
 
   return 'Palikir'
 
-} }
+}
+
+}
 
 ...even if the test were:
 
 
-{ expect( lookupCapitalCity('Palau') ).toBe('Palikir') }
+{
+
+  expect( lookupCapitalCity('Palau') ).toBe('Palikir')
+
+}
 
 
 ...you could rewrite the function to be:
 
-{ function lookupCapitalCity(someCountry) {
+{
+
+  function lookupCapitalCity(someCountry) {
 
   if (someCountry === 'Micronesia') {
 
@@ -87,13 +125,23 @@ Programmatically lazy looks something like this:
 
   }
 
-} }
+}
+
+}
 
 ...but we'd look like we didn't know any better when these two tests return false:
 
-{ expect( lookupCapitalCity('Marshall Islands') ).toBe('Majuro') }
+{
 
-{ expect( lookupCapitalCity('FSM') ).toBe('Palikir') }
+  expect( lookupCapitalCity('Marshall Islands') ).toBe('Majuro')
+
+}
+
+{
+
+  expect( lookupCapitalCity('FSM') ).toBe('Palikir')
+
+}
 
 
 Really what we're looking for is something that can go through a whole list of countries, and the different ways they can be abbreviated, and match up the results of their capitals (and probably think our way around more than a few edge conditions of spelling and world politics). Really what we're doing is matching things up in a database and this example starts to get both pointlessly simple and relatively complicated. Besides, relatively speaking, national capitals don't change all that often and copying and pasting a complete list is easy enough (except when it isn't).
