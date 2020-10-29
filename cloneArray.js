@@ -6,7 +6,7 @@
 function cloneArray(toClone) {
   let output = Array.isArray(toClone) ? [] : {};
   for (let data in toClone) {
-    let value = toClone[data];
+    const { [data] : value } = toClone;
     output[data] = ( typeof value === "object" ) ? cloneArray(value) : value;
   };
 

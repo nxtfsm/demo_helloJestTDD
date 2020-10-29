@@ -9,5 +9,7 @@ test(`creates array from "${testKey}" attributes in 'location' array`, () => {
 
   expect(result).toEqual(target);
   expect(result).not.toBe(target);
+  expect(result[0]).toEqual(target[0]);
+  expect(typeof result[0]).toBe('string');
 
 });
