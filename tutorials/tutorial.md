@@ -14,7 +14,7 @@ True or False...
 
 {
 
-  expect(1+2).toEqual(3)
+    expect(1+2).toEqual(3)
 
 }
 
@@ -24,14 +24,14 @@ No big deal, and to be fair, that's a calculation that mechanical computers were
 
 {
 
-  function add(a, b) { return a + b }
+    function add(a, b) { return a + b }
 
 }
 
 
 {
 
-  expect( add(1, 2) ).toEqual(3)
+    expect( add(1, 2) ).toEqual(3)
 
 }
 
@@ -41,7 +41,7 @@ you could also write...
 
 {
 
-  function stepAdd(number, step) { return number + (number + step) }
+    function stepAdd(number, step) { return number + (number + step) }
 
 }
 
@@ -51,7 +51,7 @@ and
 
 {
 
-  expect( stepAdd(1, 2) ).toEqual(4)
+    expect( stepAdd(1, 2) ).toEqual(4)
 
 }
 
@@ -64,7 +64,7 @@ Programmatically lazy looks something like this:
 
 {
 
-  expect( lookupCapitalCity('Micronesia') ).toBe('Palikir')
+    expect( lookupCapitalCity('Micronesia') ).toBe('Palikir')
 
 }
 
@@ -74,15 +74,15 @@ Programmatically lazy looks something like this:
 
 {
 
-  function lookupCapitalCity(someCountry) {
+    function lookupCapitalCity(someCountry) {
 
-  // look up someCountry on wikipedia or google maps or wherever
+    // look up someCountry on wikipedia or google maps or wherever
 
-  // then somehow figure out what the capital city is
+    // then somehow figure out what the capital city is
 
-  // send that answer back out to whoever called this function
+    // send that answer back out to whoever called this function
 
-}
+  }
 
 }
 
@@ -91,11 +91,11 @@ Programmatically lazy looks something like this:
 
 {
 
-  function lookupCapitalCity(someCountry) {
+    function lookupCapitalCity(someCountry) {
 
-  return 'Palikir'
+    return 'Palikir'
 
-}
+  }
 
 }
 
@@ -104,7 +104,7 @@ Programmatically lazy looks something like this:
 
 {
 
-  expect( lookupCapitalCity('Palau') ).toBe('Palikir')
+    expect( lookupCapitalCity('Palau') ).toBe('Palikir')
 
 }
 
@@ -113,19 +113,19 @@ Programmatically lazy looks something like this:
 
 {
 
-  function lookupCapitalCity(someCountry) {
+    function lookupCapitalCity(someCountry) {
 
-  if (someCountry === 'Micronesia') {
+    if (someCountry === 'Micronesia') {
 
-    return 'Palikir'
+      return 'Palikir'
 
-  } else {
+    } else {
 
-    return 'Where's that?'
+      return 'Where's that?'
+
+    }
 
   }
-
-}
 
 }
 
@@ -133,13 +133,13 @@ Programmatically lazy looks something like this:
 
 {
 
-  expect( lookupCapitalCity('Marshall Islands') ).toBe('Majuro')
+    expect( lookupCapitalCity('Marshall Islands') ).toBe('Majuro')
 
 }
 
 {
 
-  expect( lookupCapitalCity('FSM') ).toBe('Palikir')
+    expect( lookupCapitalCity('FSM') ).toBe('Palikir')
 
 }
 
