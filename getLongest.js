@@ -6,7 +6,7 @@ function getLongest(fromArray) {
 
 function _pickLonger(a, b) {
   const longer = a.length >= b.length ? a : b;
-  return longer
+  return longer;
 };
 
 module.exports = { getLongest, _pickLonger };
