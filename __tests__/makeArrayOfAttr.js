@@ -1,6 +1,6 @@
 // ./__tests__/makeArrayOfAttr.js
 const makeArrayOfAttr = require('../makeArrayOfAttr');
-const testArray = require('./main');
+const { testArray } = require('./main');
 const testKey = 'label';
 const target = ["Chuuk", "Yap", "Kiribati", "Majuro", "Pohnpei", "Kosrae"];
 const fallbackArray = [
@@ -19,6 +19,12 @@ const fallbackArray = [
 ];
 
 test("creates array from 'label' attributes in 'location' array", () => {
-  try { expect(makeArrayOfAttr(testArray, testKey)).toEqual(target); }
-  catch { expect(makeArrayOfAttr(fallbackArray, testKey)).toEqual(target); }
+  const result = makeArrayOfAttr(testArray, testKey);
+
+  expect(result).toEqual(target);
+  expect(result).not.toBe(target);
+  expect(result[0]).toEqual(target[0]);
+
+  //try { expect(makeArrayOfAttr(testArray, testKey)).toEqual(target); }
+  //catch { expect(makeArrayOfAttr(fallbackArray, testKey)).toEqual(target); }
 });

@@ -40,4 +40,4 @@ test("pads 'label' attr for all obj in array to equal length", () => {
 // 3. Create array of all labels padded to equal longest length
 // 4. Rewrite 'label' attributes in testArray to padded version
 
-module.exports = testArray;
+module.exports = { testArray };
