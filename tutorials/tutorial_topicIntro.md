@@ -41,20 +41,23 @@ expect( stepAdd(1, 2) ).toEqual(4)
 ```
 
 
-Still. This is counting on your fingers stuff, so why do the extra work? After all, good programmers are *supposed* to be lazy. But it's lazy on our terms, and since I'm itching to stick in another movie reference: "You keep using that word. I do not think it means what you think it means."
+Still. This is counting on your fingers stuff, so why do the extra work? After all, good programmers are *supposed* to be lazy. But it's lazy on our terms, so let's clear up a little of why it's a commonly held truth that a good programmer is lazy.
 
+![no gif? inconceivable!](./assets/youKeepUsingThatWord.gif)
 
-Programatically lazy is working smarter not harder, doing a little bit of thinking-work to get out of doing the stuff that's just mind-numbing repetition.  Programmatically lazy looks something like this:
+ Lazy means working smarter, doing anywhere from a little to a lot of thinking-work in order to get out of doing the stuff that's just mind-numbing and error prone repetition. Doing the work of writing tests, and even writing tests first, turns out to be the lazy way to get ahead -- something that makes more sense the more you see it in action, but one of the main reasons clear in the next example is the way testing catches problems *before* they become problems.
+
+ Writing code the lazy way says the best first step is to write what we *want* to happen, by writing a test:
 
 ```javascript
-expect( lookupCapitalCity('Micronesia') ).toBe('Palikir')
+expect( lookupCapital('Micronesia') ).toBe('Palikir')
 ```
 
+...and then working backwards, writing a function that solves the problem. In this example, that means writing code that follows the steps a human who didn't know how that test should return might take to find out the answer.
 
-...and then writing a function that automates the steps folks who don't know will take to know if that test should return true or false, so that the function will work no matter what country we throw at it:
 
 ```javascript
-function lookupCapitalCity(someCountry) {
+function lookupCapital(someCountry) {
 
     // look up someCountry on wikipedia or google maps or wherever
 
@@ -66,28 +69,26 @@ function lookupCapitalCity(someCountry) {
 ```
 
 
-...and sure, figuring out a pattern and automating that does take some thought. But this would also pass the test:
-
+...and sure, figuring out a pattern to automate that does take some thought. But it's worth it, because running *multiple* tests and testing *multiple* values will let us know when our code isn't working the way we want.
 
 ```javascript
-function lookupCapitalCity(someCountry) {
+function lookupCapital(someCountry) {
 
     return 'Palikir'
 
   }
 ```
 
-...even if the test were:
+...Works fine for the first test. Runs into problems when we try:
 
 ```javascript
-    expect( lookupCapitalCity('Palau') ).toBe('Palikir')
+    expect( lookupCapital('RMI') ).not.toBe('Palikir')
 ```
 
-
-...you could rewrite the function to be:
+...we could start extending the function to cover more cases:
 
 ```javascript
-function lookupCapitalCity(someCountry) {
+function lookupCapital(someCountry) {
 
     if (someCountry === 'Micronesia') {
 
@@ -100,9 +101,11 @@ function lookupCapitalCity(someCountry) {
     }
   }
 ```
-...and maybe you could extend that by writing:
+
+...and extend that further by writing:
+
 ```javascript
-function lookupCapitalCity(someCountry) {
+function lookupCapital(someCountry) {
 
     if (someCountry === 'Micronesia') {
 
@@ -110,9 +113,9 @@ function lookupCapitalCity(someCountry) {
 
     }
 
-    if (someCountry === 'Philippines') {
+    if (someCountry === 'RMI') {
 
-      return 'Manilla'
+      return 'Majuro'
 
     }
 
@@ -128,20 +131,20 @@ function lookupCapitalCity(someCountry) {
 ...but we'd look like we didn't know any better when these two tests return false:
 
 ```javascript
-expect( lookupCapitalCity('Marshall Islands') ).toBe('Majuro')
+expect( lookupCapital('Marshall Islands') ).toBe('Majuro')
 ```
 
 ```javascript
-expect( lookupCapitalCity('FSM') ).toBe('Palikir')
+expect( lookupCapital('FSM') ).toBe('Palikir')
+```
+and this one returns true:
+```javascript
+expect( lookupCapital('Palau') ).toBe("Where's that?")
 ```
 
-...and as programmers, we really wouldn't know any better if we wasted our time googling and then writing out 190+ 'if'/'else' handlers to cover each country in the world. To put it nicely, that would be... tedious.
+...and as programmers, we really *wouldn't* know any better if we wasted our time googling and then writing out 190+ 'if'/'else' handlers to cover each country in the world. To put it nicely, that would be... tedious. Not lazy. Error prone.
 
-Really what we're looking for is something that can go through a whole list of countries, and the different ways they can be abbreviated, and match up the results of their capitals (and probably think our way around more than a few edge conditions of spelling and world politics). In essence that's a database query and a different topic for another time, and following it too far here would make this example start to get both pointlessly simple and surprisingly complicated. Besides, relatively speaking, national capitals don't change all that often and if your App really depends on having access to that dataset, there are simpler ways to handle it than working out some kind of function to call wikipedia or google maps.
-
-
-But what about a function that also returns the current weather in the capital city?
-
+Really what we're looking for is something that can go through a whole list of countries, and the different ways they can be abbreviated, and match up the results of their capitals (and probably think our way around more than a few edge conditions of spelling and world politics). These are all perfect candidates for problems automated testing can save us from having to work our way through down the road.
 
 It's like setting up hurdles before a track meet and then starting the race, instead of telling the runners "Ok, when the gun goes off, start running, and then every 50 feet or so, stride up a little more than a yard, and then afterwards we'll watch the replay to see how things turned out." Automated testing puts the hurdles out first, and then goes a step further and hangs a gong on each one to go off the moment a runner doesn't clear it. And also takes a picture to (prove || dispute) it after the race. It says "each pice of my App must clear its matching test, and if it doesn't, my App will tell me why not."
 
