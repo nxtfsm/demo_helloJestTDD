@@ -34,14 +34,14 @@ you could also write...
 function stepAdd(number, step) { return number + (number + step) }
 ```
 
-and
+and this time you'd
 
 ```javascript
 expect( stepAdd(1, 2) ).toEqual(4)
 ```
 
 
-Still. This is counting on your fingers stuff, so why do the extra work? After all, good programmers are *supposed* to be lazy. But it's lazy on our terms, so let's clear up a little of why it's a commonly held truth that a good programmer is lazy.
+Still. This is counting on your fingers stuff, so why do the extra work? After all, good programmers are *supposed* to be lazy. But it's lazy on our terms, so let's clear up a little of why we call laziness a virtue of a great programmer.
 
 ![no gif? inconceivable!](./assets/youKeepUsingThatWord.gif)
 
