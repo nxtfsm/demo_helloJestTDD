@@ -8,7 +8,7 @@ Programmers, on the other hand, are all about that diving into the unknown / 'I 
 "Don't ask a question if you don't already know the answer."
 
 
-In a nutshell TDD works the same way: *first* you write code that checks if the code you're going to write does what you want it to do, *then* write code that will pass the test. Take a quick look at a test in its simplest form, readable even if this is the very first time you're looking at Javascript:
+In a nutshell TDD works the same way: *first* you write code that checks if the code you're going to write does what you want it to do, *then* write code that will pass the test. Take a quick look at a test in its simplest form, readable even if this is the very first time you're looking at JavaScript:
 
 
 True or False...
