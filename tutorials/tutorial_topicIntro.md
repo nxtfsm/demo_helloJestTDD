@@ -1,4 +1,4 @@
-### Topic Intro {#tutorial-topicIntro}
+# [Topic Intro](#tutorial_TopicIntro)
 Good lawyers, bad lawyers, and even people who have just watched a little bit of tv about lawyers know that the very first rule of Lawyer Club goes like this:
 
 "Don't ask a question if you don't already know the answer."
