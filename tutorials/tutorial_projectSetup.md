@@ -11,7 +11,7 @@ The width of the dropdown menu gets determined by the length of the place name f
 ![current behavior gif not found](./assets/dropdown_styleError.gif)
 
 ## [Tools:](#tutorial_projectSetup_tools)<br>
-To fix this situation, you'll use Javascript, the programming language first introduced to run in web browsers and make pages accessed on remote servers interactive at the level of users' local machines. JS has been expanded since then and gets used in lots of other ways now, and you can find out more by looking here (link to some docs) or via (some other intro to JS content to do later).<br>
+To fix this situation, you'll use Javascript, a programming language first developed to run in web browsers and make pages accessed on remote servers interactive at the level of users' local machines. JS has been expanded since then and gets used in lots of other ways now, and you can find out more by looking here (link to some docs) or via (some other intro to JS content to do later).<br>
 
 For this project, the only thing you need to know about JS to get started is that it can also be used as a server-side implementation. Feel free to skip ahead if you already know what that means. While a browser-client JS engine runs in the browser and typically means interacting with a GUI, server-side runs in the background, whether off on someone else's computer or in some remote data center, or for our purposes, as a piece of software run by your local operating system, humming along and doing its thing when you need it. For developers this is a really cool and useful thing, because it means you can build and test JS software on a local 'Development Server' to get it working *before* uploading that code to a 'Production Server' somewhere else where it will be live for your users to access.<br>
 
@@ -23,5 +23,7 @@ Netflix is a great example to understand how this works: client-side Javascript 
 Skip ahead if you already have node.js installed and know how to initiate a new package using npm.<br>
 
 If you are using Windows, follow steps 1 & 2 of this guide to install node.js and npm (node package manager):<br>
-[FOSSTechNix: How to Install Windows 10, Sept. 20 2020]
-(https://www.fosstechnix.com/how-to-install-node-js-on-windows/)
+[FOSSTechNix: How to Install Windows 10, Sept. 20 2020](https://www.fosstechnix.com/how-to-install-node-js-on-windows/)
+
+If you are using macOS, follow the docs on the official node.js site using the homebrew package manager. If you don't have homebrew installed already, the docs will link you to its installation page. There are also links to useful information for Windows & Linux installations.<br>
+[node.js: How to Install node.js](https://nodejs.dev/learn/how-to-install-nodejs)
