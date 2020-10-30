@@ -1,13 +1,14 @@
-# Tutorial -- Topic Intro
-Good lawyers, bad lawyers, and even people who have seen even a little bit of tv about lawyers know that the very first rule of Lawyer Club goes like this: "Don't ask a question if you don't already know the answer."
+### Tutorial -- Topic Intro {#tutorial_topicIntro}
+Good lawyers, bad lawyers, and even people who have just watched a little bit of tv about lawyers know that the very first rule of Lawyer Club goes like this:
 
+"Don't ask a question if you don't already know the answer."
 
 Programmers, on the other hand, are all about that diving into the unknown / 'I wonder what happens if I push this button' life. Granted, we're not always great at "could've doesn't mean should've", but it isn't like the lawyers at theFacebook etc. do such a great job of slow-walking on that one either. Even so, like just about everything else, this stuff works better when we find the common ground, and while some more experienced developers will probably disagree (and I hope they do, because then I can learn from their experience), at least to my thoroughly-warped-by-the-humanities way of thinking, automated testing and Test Driven Development (TDD) started to make a lot more sense once I started thinking of them like the second rule of Lawyer Club:
 
 "Don't ask a question if you don't already know the answer."
 
 
-In a nutshell TDD is this: *first* you write code that checks if the code you're going to write does what you want it to do. Take a quick look at a test in its simplest form, readable even if this is the very first time you're looking at Javascript:
+In a nutshell TDD works the same way: *first* you write code that checks if the code you're going to write does what you want it to do, *then* write code that will pass the test. Take a quick look at a test in its simplest form, readable even if this is the very first time you're looking at Javascript:
 
 
 True or False...
@@ -16,7 +17,7 @@ True or False...
 expect(1+2).toEqual(3)
 ```
 
-No big deal, and to be fair, that's a calculation that mechanical computers were solving before the electric lightbulb was a thing. So even though you *could* write and test the following function:
+No big deal, and to be fair, that's a calculation that mechanical computers were solving before the electric lightbulb was a thing (although back then they were called 'difference engines' which, frankly, sounds a lot cooler). So even though you *could* write and test the following function:
 
 ```javascript
 function add(a, b) { return a + b }
@@ -45,7 +46,9 @@ Still. This is counting on your fingers stuff, so why do the extra work? After a
 
 ![no gif? inconceivable!](./assets/youKeepUsingThatWord.gif)
 
- Lazy means working smarter, doing anywhere from a little to a lot of thinking-work in order to get out of doing the stuff that's just mind-numbing and error prone repetition. Doing the work of writing tests, and even writing tests first, turns out to be the lazy way to get ahead -- something that makes more sense the more you see it in action, but one of the main reasons clear in the next example is the way testing catches problems *before* they become problems.
+ Lazy means working smarter, doing anywhere from a little to a lot of thinking-work in order to get out of doing the stuff that's just mind-numbing and error prone repetition. Doing the work of writing tests, and  writing them first, turns out to be the lazy way to get ahead -- something that makes more sense the more you put it into action.
+
+ , in the next example is the way testing catches problems *before* they become problems.
 
  Writing code the lazy way says the best first step is to write what we *want* to happen, by writing a test:
 
