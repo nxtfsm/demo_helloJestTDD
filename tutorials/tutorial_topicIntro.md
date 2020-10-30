@@ -34,7 +34,7 @@ you could also write...
 function stepAdd(number, step) { return number + (number + step) }
 ```
 
-and this time you'd
+and this time
 
 ```javascript
 expect( stepAdd(1, 2) ).toEqual(4)
@@ -43,7 +43,7 @@ expect( stepAdd(1, 2) ).toEqual(4)
 
 Still. This is counting on your fingers stuff, so why do the extra work? After all, good programmers are *supposed* to be lazy. But it's lazy on our terms, so let's clear up a little of why we call laziness a virtue of a great programmer.
 
-        ![no gif? inconceivable!](./assets/youKeepUsingThatWord.gif)
+![no gif? inconceivable!](./assets/youKeepUsingThatWord.gif)
 
  Lazy means working smarter, doing anywhere from a little to a lot of thinking-work in order to get out of doing the stuff that's just mind-numbing and error prone repetition. Doing the work of writing tests, and even writing tests first, turns out to be the lazy way to get ahead -- something that makes more sense the more you see it in action, but one of the main reasons clear in the next example is the way testing catches problems *before* they become problems.
 
