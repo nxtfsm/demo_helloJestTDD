@@ -31,3 +31,7 @@ If you are using macOS, follow the docs on the official node.js site using the h
 ### [Jest](#tutorial_projectSetup_tools_jest)<br>
 
 For the heart of this project, Automated Testing and Test Driven Development, we'll work with Jest, a major JavaScript Testing Framework that you can learn more about as you go along at the official [Jest](https://jestjs.io) website.<br>
+
+[**Previous: Topic Intro**](./tutorial_topicIntro.md)<br>
+
+[**Next: Test Array, Target Array, & the Steps in Between**](./tutorial_testTargetSteps.md)
