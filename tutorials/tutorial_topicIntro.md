@@ -56,7 +56,7 @@ and this one will too:<br>
 expect( powerUp(2, powerUp(2, 3) )  ).toEqual(256)
 ```
 
-Still. This is counting on your fingers stuff, so why do the extra work? After all, good programmers are *supposed* to be lazy. But it's lazy on our terms, so let's clear up a little of why we call laziness a virtue of a great programmer.[^1]<br>
+Still. This is counting on your fingers stuff, so why do the extra work? After all, good programmers are *supposed* to be lazy. But it's lazy on our terms, so let's clear up a little of why we call laziness a virtue of a great programmer.<sup>[1](#footnote_1)</sup> <br>
 
 ![no gif? inconceivable!](./assets/youKeepUsingThatWord.gif)<br>
 *Laziness is a virtue? Inconceivable!*<br>
@@ -180,5 +180,4 @@ In the next module I'll lay off the big picture metaphors and explanations and g
 
 [**Next: Project Setup**](./tutorial_projectSetup.md)<br>
 
-[^1]:
-[The Three Virtues](http://threevirtues.com)<br>
+<a name="footnote_1">1</a>: [The Three Virtues](http://threevirtues.com)<br>
