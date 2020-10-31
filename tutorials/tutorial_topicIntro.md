@@ -163,4 +163,6 @@ That leads me back to the lawyer example from the start of this big top-level in
 
 ...and when a witness tries to come up with some answer that doesn't match the story, knowing the expected answers inside and out beforehand sets a good lawyer up to jump on any mistake. That's what TDD does for programmers.
 
-In the next module I'll lay off the big picture metaphors and explanations and go straight into writing code and building out the App we're going to complete over the rest of this project.
+In the next module I'll lay off the big picture metaphors and explanations and go straight into writing code and building out the App we're going to complete over the rest of this project.<br>
+
+[**Next: Project Setup**](./tutorials_projectSetup.md)
