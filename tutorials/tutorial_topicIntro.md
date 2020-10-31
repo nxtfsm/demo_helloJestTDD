@@ -56,7 +56,7 @@ and this one will too:<br>
 expect( powerUp(2, powerUp(2, 3) )  ).toEqual(256)
 ```
 
-Still. This is counting on your fingers stuff, so why do the extra work? After all, good programmers are *supposed* to be lazy. But it's lazy on our terms, so let's clear up a little of why we call laziness a virtue of a great programmer.<br>
+Still. This is counting on your fingers stuff, so why do the extra work? After all, good programmers are *supposed* to be lazy. But it's lazy on our terms, so let's clear up a little of why we call laziness a virtue of a great programmer.[^1]<br>
 
 ![no gif? inconceivable!](./assets/youKeepUsingThatWord.gif)<br>
 *Laziness is a virtue? Inconceivable!*<br>
@@ -179,3 +179,6 @@ That leads me back to the lawyer example from the start of this big top-level in
 In the next module I'll lay off the big picture metaphors and explanations and go straight into writing code and building out the App we're going to complete over the rest of this project.<br>
 
 [**Next: Project Setup**](./tutorial_projectSetup.md)<br>
+
+[^1]:
+[The Three Virtues](http://threevirtues.com)<br>
