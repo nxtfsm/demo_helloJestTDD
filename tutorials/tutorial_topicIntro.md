@@ -5,7 +5,8 @@ Good lawyers, bad lawyers, and even people who have just watched a little bit of
 
 Programmers, on the other hand, are all about that diving into the unknown / 'I wonder what happens if I push this button' life. Granted, we're not always great at "could've doesn't mean should've", but it isn't like the lawyers at theFacebook etc. do such a great job of slow-walking on that one either.
 
-!['Can do, not should do gif should go here'](./assets/canDoNotShouldDo.gif)
+!['Can do, not should do gif should go here'](./assets/canDoNotShouldDo.gif)<br>
+*Can do or should do? Jury's still out on this one.*
 
 Even so, like just about everything else, this stuff works better when we find the common ground, and while some more experienced developers will probably disagree (and I hope they do, because then I can learn from their experience), at least to my thoroughly-warped-by-the-humanities way of thinking, automated testing and Test Driven Development (TDD) started to make a lot more sense once I started thinking of them like the second rule of Lawyer Club:
 
