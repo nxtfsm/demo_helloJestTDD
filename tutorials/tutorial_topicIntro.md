@@ -31,9 +31,7 @@ function add(a, b) { return a + b }
 expect( add(1, 2) ).toEqual(3)
 ```
 
-
 you could also write...<br>
-
 
 ```javascript
 function stepAdd(number, step) { return number + (number + step) }
@@ -44,7 +42,19 @@ and this time<br>
 ```javascript
 expect( stepAdd(1, 2) ).toEqual(4)
 ```
+or even<br>
 
+```javascript
+function powerUp(base, power) { return base ** power }
+```
+and this test will return true:<br>
+```javascript
+expect( powerUp(1,2) ).toEqual(1)
+```
+and this one will too:<br>
+```javascript
+expect( powerUp(2, powerUp(2, 3) )  ).toEqual(256)
+```
 
 Still. This is counting on your fingers stuff, so why do the extra work? After all, good programmers are *supposed* to be lazy. But it's lazy on our terms, so let's clear up a little of why we call laziness a virtue of a great programmer.<br>
 
