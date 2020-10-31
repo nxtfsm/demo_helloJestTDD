@@ -165,4 +165,4 @@ That leads me back to the lawyer example from the start of this big top-level in
 
 In the next module I'll lay off the big picture metaphors and explanations and go straight into writing code and building out the App we're going to complete over the rest of this project.<br>
 
-[**Next: Project Setup**](./tutorials_projectSetup.md)
+[**Next: Project Setup**](./tutorial_projectSetup.md)
