@@ -1,6 +1,6 @@
-- [ ] **Topic Intro**<br>
-- [ ] **Project Setup**<br>
-- [ ] **Test, Target, Steps**<br>
+- [ ] [**Topic Intro**](./tutorial_topicIntro.md)<br>
+- [ ] [**Project Setup**](./tutorial_projectSetup.md)<br>
+- [ ] [**Test, Target, Steps**](./tutorial_testTargetSteps.md)<br>
 - [ ] **Map Attr from Obj Array**<br>
 - [ ] **Get Longest**<br>
 - [ ] **Pad to Longest**<br>
