@@ -47,11 +47,13 @@ or even<br>
 ```javascript
 function powerUp(base, power) { return base ** power }
 ```
-and this test will return true:<br>
+and see these three tests pass:<br>
 ```javascript
 expect( powerUp(1,2) ).toEqual(1)
 ```
-and this one will too:<br>
+```javascript
+expect( powerUp(2,3) ).toEqual(8)
+```
 ```javascript
 expect( powerUp(2, powerUp(2, 3) )  ).toEqual(256)
 ```
