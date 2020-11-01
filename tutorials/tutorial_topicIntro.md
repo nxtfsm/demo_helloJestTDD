@@ -58,7 +58,7 @@ expect( powerUp(2,3) ).toEqual(8)
 expect( powerUp(2, powerUp(2, 3) )  ).toEqual(256)
 ```
 
-Still. This is counting on your fingers stuff, so why do the extra work? After all, good programmers are *supposed* to be lazy. But it's lazy on our terms, so let's clear up a little of why we call laziness a virtue of a great programmer.<sup>[1](#footnote_1)</sup> <br>
+Still. This is counting on your fingers stuff, so why do the extra work? After all, good programmers are *supposed* to be lazy. But it's lazy on our terms, so let's clear up a little of what it means to call laziness a virtue of a great programmer.<sup>[1](#footnote_1)</sup> <br>
 
 ![no gif? inconceivable!](./assets/youKeepUsingThatWord.gif)<br>
 *Laziness is a virtue? Inconceivable!*<br>
