@@ -82,6 +82,149 @@ or even:<br>
 ~/codeTutorials/javascript
 ```
 
+All are good enough options, and if you have some variation on this setup already, use your command line (CLI) to navigate there. If not, use your command line to create the following directories (first, making sure that you are at the top level 'home directory'):<br>
+
+```bash
+cd ~
+mkdir codeTutorials
+mkdir codeTutorials/javascript
+cd codeTutorials/javascript
+```
+
+Now we're all on the same page. Within this directory for storing javascript tutorials, create the directory for our current project and navigate into it (remember that once the directory exists, you can use 'tab' to autocomplete, saving keystrokes and avoiding typos):<br>
+
+```bash
+mkdir tddIntro_dropdownLabelPadder
+cd tddIntro_dropdownLabelPadder
+```
+
+Now we're going to use npm to create our project as a package that can be run by node.js, using the following command (the '-y' flag tells the npm init function that we just want to use/accept all the default options when it creates our project package):<br>
+
+```bash
+npm init -y
+```
+
+This should return the following output, letting you know the initializer ran successfully, displaying the contents written into a new 'package.json' file:<br>
+
+```bash
+Wrote to [your prefix directories of]/tddIntro_dropdownLabelPadder/package.json:
+
+{
+  "name": "tddIntro_dropdownLabelPadder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+```
+
+('json' stands for 'JavaScript Object Notation', and is simply a commonly implemented formatting of data structures in a syntax familiar to JavaScript that is implemented and translatable by most major programming languages -- i.e. it allows programs written in JavaScript and Python to interact cleanly. For more information on how this works and what it allows, take a look at this 11 minute intro on YouTube when you feel curious: [JSON Crash Course](https://www.youtube.com/watch?v=GpOO5iKzOmY))<br>
+
+You can also see all of the files created by 'npm init' and currently in your project directory by running the 'list' command, and expecting the following output:<br>
+
+```bash
+ls
+package.json
+```
+
+Just one file for now. Let's expand that. First, let's go ahead and install Jest, since this is a core component for our project. Run the following command, watch as it executes, and after it completes, run 'ls' again to see the result:
+
+```bash
+npm install --save-dev jest
+```
+
+You might see some warnings along the way, but these can be ignored for now. The '--save-dev' flag is used to tell npm that we are only using the package getting installed ('jest') as a 'development' package, and so it will not be included if later on we use npm to bundle up all of our files as something for other users (this helps keep file size down and apps running faster). Now, you should be able to run the 'list' command and see the following two files and subdirectory:
+
+```bash
+ls
+node_modules package-lock.json package.json
+```
+
+The 'node_modules' directory is where all of the code for the packages we install will be kept, and should never have to be modified. The package-lock.json file will keep a record of all the packages we have installed, and it will record which of those we have installed for development use only using --save-dev. This will be a very long file, because it will also include information on all of the sub-dependencies required by whatever packages we install ourselves, and like the 'node_modules' directory, we should never have to modify the 'package-lock.json' file.<br>
+
+You will see though that the package.json file also keeps a record of which package dependencies and devDependencies we have installed, and that they appear in a much shorter and friendlier to read file, showing the name of the package dependency and the current version installed. You can see this by running the following command to output the content of the 'package.json' file to your command line:<br>
+
+```bash
+cat package.json
+{
+  "name": "tddIntro_dropdownLabelPadder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.6.2"
+  }
+}
+```
+
+By reading the Jest documentation, we learn that Jest will use a function called 'testMatch' to run tests for every file with a .test or .spec extension (i.e. myFile.test.js ), and for every .js file inside of a directory called `__tests__`. This second way seems like a good way to keep our project files organized, so go ahead and create that directory now:<br>
+
+```bash
+mkdir __tests__
+```
+
+Now, for every '.js' file we create in the root (./) app directory, we'll create a corresponding '.js' file in the `./__tests__` directory. Go ahead and implement this by using the 'touch' command to create the following two files, and use the 'ls' command to see the results:
+
+```bash
+touch main.js
+touch __tests__/main.js
+ls
+ls __tests__
+```
+
+Finally, go ahead and open the entire package directory and subdirectories in your preferred code editor. Using Atom, you can do this from the current directory by running the following command (telling your CLI to go up one directory level, then open the entire 'tddIntro_dropdownLabelPadder' directory in Atom):
+
+```bash
+atom ../tddIntro_dropdownLabelPadder
+```
+
+Swapping over to Atom, you will need to modify the following attribute in package.json (by default, it will be at line 7):<br>
+
+From:<br>
+```javascript
+"scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1"
+}
+```
+
+To:<br>
+```javascript
+"scripts": {
+  "test": "jest --coverage --passWithNoTests"
+}
+```
+
+By changing the value for the 'test' attribute of the 'scripts' object in the project's package.json file, we can now run the entire testing suite for our project by executing the following function at the CLI, telling npm to execute whatever script we have configured for 'test' to reference:<br>
+
+```bash
+npm run test
+```
+
+For now, you will see Jest go through the process of running tests, but in the end, it will fail and return an error. This is ok, and the expected behavior. By passing the '--passWithNoTests' flag, we have told jest that it is ok if no tests run. But there is still a minimum amount of input it must receive, and as both our `./main.js` and `./__tests__/main.js` files are empty at this point, the tests will fail.  We will look more at the '--coverage flag later'.<br>
+
+That's it! Your project is all setup, and ready to get into the core of writing and testing functional javascript code in the next section. Double check, before moving on, that your directory structure currently looks like:
+
+```
+tddIntro_dropdownLabelPadder
+--> __tests__/
+      -->main.js
+--> node_modules/
+--> main.js
+--> package.json
+--> package-lock.json
+```
+
 [**Previous: Topic Intro**](./tutorial_topicIntro.md)<br>
 
 [**Next: Test Array, Target Array, & the Steps in Between**](./tutorial_testTargetSteps.md)
