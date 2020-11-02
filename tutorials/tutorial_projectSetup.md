@@ -66,7 +66,7 @@ calculateCollision(bird, block)
 
 If that still seems a little confusing, that's ok; just keep going ahead, and it will get clearer as you write code implementing this structure yourself. Whenever you're interested in learning more about Packages and how they're used, this blog post on freecodecamp.org is a good place to start: ['An introduction to how JavaScript package managers work'](https://www.freecodecamp.org/news/javascript-package-managers-101-9afd926add0a/). For now, go ahead and move on to the final portion of this section, using the command line to create our project's directory structure and initial files.<br>
 
-## Initialize Project Directory<br>
+## <a name="initalize-project-directory"> Initialize Project Directory</a><br>
 
 [**Previous: Topic Intro**](./tutorial_topicIntro.md)<br>
 
