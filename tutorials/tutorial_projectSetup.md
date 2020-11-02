@@ -30,7 +30,43 @@ If you are using macOS, follow the docs on the official node.js site using the h
 
 ### [Jest](#tutorial_projectSetup_tools_jest)<br>
 
-For the heart of this project, Automated Testing and Test Driven Development, we'll work with Jest, a major JavaScript Testing Framework that you can learn more about as you go along at the official [Jest](https://jestjs.io) website.<br>
+For the heart of this project, Automated Testing and Test Driven Development, we'll work with Jest, a major JavaScript Testing Framework that you can learn more about as you go along or after finishing via the official [Jest](https://jestjs.io) website.<br>
+
+To get started, all you need to understand is that we will install Jest as a 'package' into our application. 'Package' simply means a reusable piece of software that we can download, incorporate, and use when building out other applications. If that is something you already understand, then feel free to skip ahead to the last portion of this section, [link will be here].<br>
+
+For a quick example, imagine that you're going to make your own version of Angry Birds. For the game interactions to feel enjoyable, you'll have to make the physics calculations for shooting birds in an arc and calculating collisions match up with how objects move in the real world. But remembering the programmer's virtue of laziness, you figure that someone else has probably already done that work (and done it more expertly!). Instead of getting sidetracked from building out the other elements of your game by solving the problems involved in writing functions like:
+
+```javascript
+function calculateTrajectory(ofAngle, withForce) {
+  // do some math using 'ofAngle' and 'withForce' parameters
+};
+
+calculateTrajectory(30, 90)
+```
+```javascript
+function calculateCollision(objectA, objectB) {
+  // do some math using 'objectA' and 'objectB' parameters
+}
+
+calculateCollision(bird, block)
+```
+
+By using a package manager, like npm, you can find a Javascript physics calculator already written (for the example, lets pretend it's called SweetPhysicsEngine), and import these functions from there. This can be done a few different ways, but one implemented by node.js that you'll use in this project gets implemented like this:<br>
+
+```javascript
+const { calculateTrajectory, calculateCollision } = require('SweetPhysicsEngine')
+```
+
+In plain human terms, all that line of code is doing is saying "use the function named 'require' to look in a module named with the string 'SweetPhyicsEngine' and get the attributes it exports as 'calculateTrajectory ' and 'calculateCollision' so that I can use them here." Now you can use these two functions exactly as if you'd defined them yourself: <br>
+
+```javascript
+calculateTrajectory(30, 90)
+calculateCollision(bird, block)
+```
+
+If that still seems a little confusing, that's ok; just keep going ahead, and it will get clearer as you write code implementing this structure yourself. Whenever you're interested in learning more about Packages and how they're used, this blog post on freecodecamp.org is a good place to start: ['An introduction to how JavaScript package managers work'](https://www.freecodecamp.org/news/javascript-package-managers-101-9afd926add0a/). For now, go ahead and move on to the final portion of this section, using the command line to create our project's directory structure and initial files.<br>
+
+## [Initialize Project Directory:](#tutorial_projectSetup_initProject)<br>
 
 [**Previous: Topic Intro**](./tutorial_topicIntro.md)<br>
 
