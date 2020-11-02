@@ -66,7 +66,21 @@ calculateCollision(bird, block)
 
 If that still seems a little confusing, that's ok; just keep going ahead, and it will get clearer as you write code implementing this structure yourself. Whenever you're interested in learning more about Packages and how they're used, this blog post on freecodecamp.org is a good place to start: ['An introduction to how JavaScript package managers work'](https://www.freecodecamp.org/news/javascript-package-managers-101-9afd926add0a/). For now, go ahead and move on to the final portion of this section, using the command line to create our project's directory structure and initial files.<br>
 
-## <a name="initalize-project-directory"> Initialize Project Directory</a><br>
+## <a name="initalize-project-directory">Initialize Project Directory</a><br>
+
+By now, you probably have some personal preference about where you keep various coding projects. It is important to keep refining this over time, because good file organization is one of the best ways to make your life easier and your code better as you grow as a developer. For example, keeping everything at the top level of your home directory (~) would quickly lead to total confusion; on the other hand, keeping your work on JS tutorials in either:<br>
+
+```bash
+~/codingProjects/javascript/tutorials
+```
+```bash
+~/codingProjects/tutorials/javascript
+```
+or even:<br>
+
+```bash
+~/codeTutorials/javascript
+```
 
 [**Previous: Topic Intro**](./tutorial_topicIntro.md)<br>
 
