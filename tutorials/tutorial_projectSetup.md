@@ -10,7 +10,7 @@ The width of the dropdown menu gets determined by the length of the place name f
 ### Current State
 ![current behavior gif not found](./assets/dropdown_styleError.gif)
 
-## [Tools:](#tutorial_projectSetup_tools)<br>
+## [Tools](#tutorial_projectSetup_tools)<br>
 To fix this situation, you'll use JavaScript, a programming language first developed to run in web browsers and make pages accessed on remote servers interactive at the level of users' local machines. JS has been expanded since then and gets used in lots of other ways now, and you can find out more by looking here (link to some docs) or via (some other intro to JS content to do later).<br>
 
 For this project, the only thing you need to know about JS to get started is that it can also be used as a server-side implementation. Feel free to skip ahead if you already know what that means. While a browser-client JS engine runs in the browser and typically means interacting with a GUI, server-side runs in the background, whether off on someone else's computer or in some remote data center, or for our purposes, as a piece of software run by your local operating system, humming along and doing its thing when you need it. For developers this is a really cool and useful thing, because it means you can build and test JS software on a local 'Development Server' to get it working *before* uploading that code to a 'Production Server' somewhere else where it will be live for your users to access.<br>
@@ -66,7 +66,7 @@ calculateCollision(bird, block)
 
 If that still seems a little confusing, that's ok; just keep going ahead, and it will get clearer as you write code implementing this structure yourself. Whenever you're interested in learning more about Packages and how they're used, this blog post on freecodecamp.org is a good place to start: ['An introduction to how JavaScript package managers work'](https://www.freecodecamp.org/news/javascript-package-managers-101-9afd926add0a/). For now, go ahead and move on to the final portion of this section, using the command line to create our project's directory structure and initial files.<br>
 
-## [Initialize Project Directory:](#Initialize-Project-Directory)<br>
+## [Initialize Project Directory](#Initialize-Project-Directory)<br>
 
 [**Previous: Topic Intro**](./tutorial_topicIntro.md)<br>
 
