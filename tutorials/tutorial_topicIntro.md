@@ -65,7 +65,7 @@ Still. This is counting on your fingers stuff, so why do the extra work? After a
 
  Lazy means working smarter, doing anywhere from a little to a lot of thinking-work in order to get out of doing the stuff that's just mind-numbing and error prone repetition. Doing the work of writing tests, and  writing them first, turns out to be the lazy way to get ahead -- something that makes more sense the more you put it into action. Among other benefits, you'll see how it helps you catch problems *before* they become problems.<br>
 
- Laziness says leads us *first* to write what we *want* to happen, by writing a test:<br>
+ Laziness leads us *first* to write what we *want* to happen, by writing a test:<br>
 
 ```javascript
 expect( lookupCapital('Micronesia') ).toBe('Palikir')
